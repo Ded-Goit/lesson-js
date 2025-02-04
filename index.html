@@ -1,11 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script type="module" src="./lesson-1.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java Script blended</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="./javascript.png" />
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+   <!-- #region header -->
+    <header class="page-header">
+      <div class="container header-container">
+        <nav class="nav-header">
+          <a class="logo header-logo" href="./index.html"
+            >Java Script<span class="logo-part">-blended</span></a
+          >
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">HW_1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./hw_2.html">HW_2</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="./hw_3.html">HW_3</a></li>
+            <li class="nav-item"><a class="nav-link" href="./hw_4.html">HW_4</a></li>
+            <li class="nav-item"><a class="nav-link" href="./hw_5.html">HW_5</a></li>
+            <li class="nav-item"><a class="nav-link" href="./hw_6.html">HW_6</a></li>
+          </ul>
+        </nav>
+        <button class="burger-btn" type="button" data-menu-open>
+          <svg class="burger-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </div>
+      <!--#region mobile-menu-->
+      <!--change class name "mobile-menu is-open"-->
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu-container">
+          <button class="mobile-menu-btn-close" data-menu-close>
+            <svg class="mobile-icon-btn-close" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <nav class="mobile-menu-nav">
+            <ul class="mobile-menu-list">
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link current" href="./index.html">HW_1</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link" href="./index.html">HW_1</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link" href="./hv_2.html">HW_2</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link" href="./hw_3.html">HW_3</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link" href="./hw_4.html">HW_4</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link" href="./hw_5.html">HW_5</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link" href="./hw_6.html">HW_6</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="mobile-menu-socials-container">
+            <ul class="mobile-menu-socials-list">
+              <li class="mobile-menu-socials-item">
+                <a
+                  class="mobile-menu-socials-link"
+                  href="https://instagram.com"
+                >
+                  <svg class="mobile-menu-socials-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-menu-socials-item">
+                <a class="mobile-menu-socials-link" href="https://twitter.com">
+                  <svg class="mobile-menu-socials-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-menu-socials-item">
+                <a class="mobile-menu-socials-link" href="https://facebook.com">
+                  <svg class="mobile-menu-socials-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-menu-socials-item">
+                <a class="mobile-menu-socials-link" href="https://linkedin.com">
+                  <svg class="mobile-menu-socials-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--#endregion-->
+    </header>
+    <!--#endregion-->
+    <main>
+      <!-- #region hero section main -->
+      <section class="page-hero">
+        <div class="container hero-container">
+          <h1 class="hero-title">ТЗ</h1>
+          <strong>В першу чергу ви маєте:</strong>
+          <ul class="num-list">
+            <li class="hero-item">
+              <strong>1.Створити репозиторій на GitHub:</strong>
+              <ul>
+                <li class="hero-item">
+                  <p>
+                    Ви маєте створити новий репозиторій на GitHub (назва
+                    довільна).
+                  </p>
+                </li>
+                <li class="hero-item">
+                  <p>
+                    Далі –<strong
+                      >склонувати цей репозиторій на свій комп’ютер
+                    </strong>
+                    для роботи над проєктом та відкрити його у VSCode.
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>2.Підготувати структуру проєкту:</strong>
+              <ul>
+                <li class="hero-item">
+                  <p>У кореневій папці проєкту створіть такі файли та папки:</p>
+                </li>
+                <li class="hero-item">
+                  <p>
+                    <strong>index.html</strong> – основний файл із розміткою
+                    сторінки (сюди ж ви будете підключати скрипти).
+                  </p>
+                </li>
+                <li class="hero-item">
+                  <p>
+                    <strong>js</strong> – папка для зберігання усіх js-файлів
+                    (ви зможете працювати в одному репозиторії впродовж
+                    декількох занять, але створювати для кожного заняття окремий
+                    js-файл для зручності і швидкого пошуку потрібного
+                    матеріалу).
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li class="hero-item">
+              <strong
+                >3.Створити файл для виконання завдань на першому
+                занятті:</strong
+              >
+              <ul>
+                <li class="hero-item">
+                  <p>
+                    Ви маєте створити файл
+                    <strong>lesson-1.js</strong> всередині папки
+                    <strong>js</strong>, вам він буде потрібен для написання
+                    коду на першому занятті.
+                  </p>
+                </li>
+                <li class="hero-item">
+                  <p>
+                    Підключити файл <strong>lesson-1.js</strong> до файлу
+                    <strong>index.html</strong> через тег script.
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li class="hero-item">
+              <strong>
+                4.Далі по черзі копіюйте кожне завдання в файл lesson-1.js, з
+                переліку нижче, а після умови задачі пишіть її вирішення.
+              </strong>
+            </li>
+          </ul>
+          <div class="container hero-container-task">
+            <ul class="num-list">
+              <li class="list-task">
+                <h2 class="title-task">завдання 1:</h2>
+                <p class="text-task">
+                  // Запропонуйте користувачу ввести число за допомогою
+                  prompt().
+                </p>
+                <p class="text-task">
+                  // Збережіть введене значення у змінну number.
+                </p>
+                <p class="text-task">
+                  // Перевірте, чи дорівнює змінна number числу 10:
+                </p>
+                <p class="text-task">
+                  // Якщо так – виведіть повідомлення 'Вірно' у alert().
+                </p>
+                <p class="text-task">// Якщо ні – виведіть 'Невірно'.</p>
+                <p class="text-task">
+                  // Підказка: prompt завжди повертає рядок (String), тому перед
+                  перевіркою
+                </p>
+                <p class="text-task">
+                  // перетворіть значення на число за допомогою Number().
+                </p>
+              </li>
+              <li class="list-task">
+                <h2 class="title-task">завдання 2:</h2>
+                <p class="text-task">
+                  // У змінній min лежить випадкове число від 0 до 59.
+                </p>
+                <p class="text-task">
+                  // Визначте, в яку чверть години потрапляє
+                </p>
+                <p class="text-task">
+                  // це число (у першу, другу, третю чи четверту).
+                </p>
+                <p class="text-task">
+                  // Виведіть в alert відповідне повідомлення, наприклад:
+                </p>
+                <p class="text-task">// "10 входить в першу чверть"</p>
+                <p class="text-task">
+                  // const min = Math.floor(Math.random() * (59 - 0) + 0)";"
+                </p>
+              </li>
+              <li class="list-task">
+                <h2 class="title-task">завдання 3:</h2>
+                <p class="text-task">
+                  // Змінна num може набувати 4 значення: '1', '2', '3' або '4'
+                </p>
+                <p class="text-task">
+                  // (запитуй це значення у користувача через prompt).
+                </p>
+                <p class="text-task">
+                  // Якщо вона має значення '1', то у змінну result запишіть
+                  'зима',
+                </p>
+                <p class="text-task">
+                  // якщо має значення '2' - 'весна' і так далі.
+                </p>
+                <p class="text-task">// Розв'яжіть завдання через switch-case.</p>
+                <p class="text-task">
+                  // Не забудьте про дефолтне значення, на випадок, якщо
+                  користувач
+                </p>
+                <p class="text-task">
+                  // введе в prompt щось інше. В такому випадку result має
+                  набувати значення:
+                </p>
+                <p class="text-task">
+                  // "Вибачте, але ви маєте ввести значення від 1 до 4 включно".
+                </p>
+                <p class="text-task">
+                  // Значення змінної result виведіть в консоль.
+                </p>
+              </li>
+              <li class="list-task">
+                <h2 class="title-task">завдання 4:</h2>
+                <p class="text-task">
+                  // Отримуйте від користувача число (кількість хвилин) через
+                  prompt
+                </p>
+                <p class="text-task">
+                  // і виводьте у консоль рядок у форматі годин та хвилин.
+                </p>
+                <p class="text-task">
+                  // Приклад: користувач вводить в prompt '70' -> в консолі
+                  відобразиться '01:10'.
+                </p>
+                <p class="text-task">
+                  // Корисне посилання для відображення годин та хвилин 
+                </p>
+                <p class="text-task">
+                  //  у
+                  потрібному форматі ('01' замість '1'):
+                </p>
+               <a href="http://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart#examples" target="_blank">developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects</a>
+                  
+                  
+                </p>
+                <p class="text-task"></p>
+                <p class="text-task"></p>
+                <p class="text-task"></p>
+                <p class="text-task"></p>
+              </li>
+              <li class="list-task">
+                <h2 class="title-task">завдання 5:</h2>
+                <p class="text-task">
+                  // Напишіть код, який запитуватиме у користувача
+                </p>
+                <p class="text-task">
+                  // логін за допомогою prompt і виводить результат в консоль
+                  браузера
+                </p>
+                <p class="text-task">
+                  // Після цього додайте перевірку введеного користувачем
+                  значення:
+                </p>
+                <p class="text-task">// Якщо відвідувач вводить "Адмін",</p>
+                <p class="text-task">
+                  // то prompt запитує пароль (не забудьте зберігти його у
+                  змінну для подальшої перевірки).
+                </p>
+                <p class="text-task">
+                  // Якщо нічого не ввели або натиснули Cancel,
+                </p>
+                <p class="text-task">// Вивести в alert строку "Скасовано"</p>
+                <p class="text-task">
+                  // В іншому випадку вивести в alert рядок "Я вас не знаю"
+                </p>
+                <p class="text-task">// Пароль перевіряти так:</p>
+                <p class="text-task">// Якщо введено пароль "Я головний",</p>
+                <p class="text-task">
+                  // то вивести в alert рядок "Добрий день!",
+                </p>
+                <p class="text-task">
+                  // в іншому випадку вивести в alert рядок "Невірний пароль!"
+                </p>
+              </li>
+              <li class="list-task">
+                <h2 class="title-task">завдання 6:</h2>
+                <p class="text-task">
+                  // Використайте цикл while, щоб вивести в console всі числа
+                  від 0 до 20 включно.
+                </p>
+              </li>
+              <li class="list-task">
+                <h2 class="title-task">завдання 7:</h2>
+                <p class="text-task">
+                  // Напишіть функцію getNumbers(min, max), що приймає 2
+                  параметри -
+                </p>
+                <p class="text-task">
+                  // мінімальне і максимальне число відповідно.
+                </p>
+                <p class="text-task">
+                  // Напишіть цикл всередині функції, який виводить у консоль
+                </p>
+                <p class="text-task">// всі числа від max до min за спаданням.</p>
+                <p class="text-task">
+                  // Окрім цього, підрахуйте суму всіх парних чисел в цьому
+                  циклі
+                </p>
+                <p class="text-task">// і поверніть її з функції.</p>
+              </li>
+              <li class="list-task">
+                <h2 class="title-task">завдання 8:</h2>
+                <p class="text-task">
+                  // Напишіть функцію min(a, b), яка приймає 2 числа і повертає
+                  меньше з них.
+                </p>
+                <p class="text-task">
+                  // Потрібно додати перевірку, що функція отримує саме числа, в
+                  іншому випадку
+                </p>
+                <p class="text-task">
+                  // повертати з функції рядок - 'Not a number!'.
+                </p>
+              </li>
+              <li class="list-task">
+                <h2 class="title-task">завдання 9:</h2>
+                <p class="text-task">
+                  // Напишіть функцію isAdult(age), яка приймає число - вік
+                  користувача і повертає true,
+                </p>
+                <p class="text-task">
+                  // якщо параметр age більше чи дорівнює 18.
+                </p>
+                <p class="text-task">
+                  // В іншому випадку вона запитує підтвердження через confirm
+                </p>
+                <p class="text-task">
+                  // і повертає його результат (true/false).
+                </p>
+              </li>
+              <li class="list-task">
+                <h2 class="title-task">завдання 10:</h2>
+                <p class="text-task">
+                  // Напишіть функцію fizzBuzz(num), яка приймає число і
+                  перевіряє кожне число від 1 до num:
+                </p>
+                <p class="text-task">
+                  // Якщо число ділитися без остачі на 3 - виводить в консоль
+                  'fizz',
+                </p>
+                <p class="text-task">
+                  // якщо ділиться без остачі на 5 - виводить в консоль 'buzz',
+                </p>
+                <p class="text-task">
+                  // якщо ділиться без остачі і на 3, і на 5 - виводить в
+                  консоль 'fizzbuzz'.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- #endregion -->
+    </main>
+    <!--#region  footer -->
+    <footer class="footer-page">
+      <h2 class="title">Результат:</h2>
+      <ul class="items">
+        <li class="item">
+          У вас власний проєкт, в якому буде 5-10 вирішених задач по 1-2
+          модулям, можливо навіть з кількома варіантами вирішення.
+        </li>
+        <li class="item">
+          Проєкт оформлений у вигляді репозиторію на GitHub, що підготує вас до
+          правильної роботи з проєктами та домашніми завданнями.
+        </li>
+        <li class="item">
+          Ви закріпите навички роботи з основами JS та навчитеся працювати з
+          репозиторіями для організації власних проєктів.
+        </li>
+      </ul>
+      <p class="text">
+        Ці завдання допоможуть вам краще зрозуміти такі важливі теми, як основні
+        типи даних в js, основи функцій, розгалуження та цикли, а також набути
+        впевненості у роботі з GitHub.
+      </p>
+    </footer>
+    <!--#endregion -->
+
+    <script src="./js/menu.js"></script>
+    <script type="module" src="./js/lesson-1.js" defer></script>
+    <!--<script type="module" src="./js/lesson-2.js" defer></script>-->
+    <!--<script type="module" src="./js/lesson-3.js" defer></script>-->
+    <!--<script type="module" src="./js/lesson-4.js" defer></script>-->
+    <!--<script type="module" src="./js/lesson-5.js" defer></script>-->
+    <!--<script type="module" src="./js/lesson-6.js" defer></script>-->
+
+</body>
 </html>
+
+  
+    
+  
+   
