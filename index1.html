@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Script blended</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="./javascript.png" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <!-- #region header -->
+    <header class="page-header">
+      <div class="container header-container">
+        <nav class="nav-header">
+          <a class="logo header-logo" href="./index.html"
+            >Java Script<span class="logo-part">-blended</span></a
+          >
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">lesson-4</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./hw_1.html">HW_1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./hw_2.html">HW_2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./hw_3.html">HW_3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./hw_4.html">HW_4</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="burger-btn" type="button" data-menu-open>
+          <svg class="burger-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </div>
+      <!--#region mobile-menu-->
+      <!--change class name "mobile-menu is-open"-->
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu-container">
+          <button class="mobile-menu-btn-close" data-menu-close>
+            <svg class="mobile-icon-btn-close" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <nav class="mobile-menu-nav">
+            <ul class="mobile-menu-list">
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link" href="./hw_1.html">HW_1</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link" href="./hw_2.html">HW_2</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link" href="./hw_3.html">HW_3</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link" href="./hw_4.html">HW_4</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link current" href="./index.html"
+                  >lesson-4</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="mobile-menu-socials-container">
+            <ul class="mobile-menu-socials-list">
+              <li class="mobile-menu-socials-item">
+                <a
+                  class="mobile-menu-socials-link"
+                  href="https://instagram.com"
+                >
+                  <svg class="mobile-menu-socials-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-menu-socials-item">
+                <a class="mobile-menu-socials-link" href="https://twitter.com">
+                  <svg class="mobile-menu-socials-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-menu-socials-item">
+                <a class="mobile-menu-socials-link" href="https://facebook.com">
+                  <svg class="mobile-menu-socials-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-menu-socials-item">
+                <a class="mobile-menu-socials-link" href="https://linkedin.com">
+                  <svg class="mobile-menu-socials-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--#endregion-->
+    </header>
+    <!--#endregion-->
+    <main>
+      <!-- #region hero section main -->
+      <section class="page-hero">
+        <div class="container">
+          <h1 id="title">Базові операції з DOM</h1>
+          <ul class="list">
+            <li data-topic="navigation">
+              <h3>Навігація по DOM</h3>
+              <p>
+                Доступ до DOM починається з об'єкта document, з нього можна
+                дістатися до будь-яких елементів.
+              </p>
+            </li>
+            <li data-topic="search">
+              <h3>Пошук елементів</h3>
+              <p>
+                Група методів elem.querySelector* - це сучасний стандарт для
+                пошуку елементів.
+              </p>
+            </li>
+            <li data-topic="props">
+              <h3 class="completed">Властивості та атрибути</h3>
+              <p>
+                elem.textContent, elem.classList, elem.style,
+                elem.hasAttribute(name), elem.getAttribute(name),
+                elem.setAttribute(name, value), elem.removeAttribute(name)
+              </p>
+            </li>
+            <li data-topic="manipulation">
+              <h3>Створення та видалення елементів</h3>
+              <p>
+                DOM API дозволяє не тільки вибирати або змінювати вже існуючі,
+                але й видаляти, а також створювати нові елементи, після чого
+                додавати їх в документ.
+              </p>
+            </li>
+          </ul>
+
+          <!-- Form HTML -->
+          <form class="contact-form js-contact-form">
+            <input
+              name="userName"
+              type="text"
+              class="contact-form-input js-username-input"
+              data-length="8"
+              placeholder="Your name"
+            />
+            <label class="js-policy-label">
+              <input
+                type="checkbox"
+                name="accept"
+                class="contact-form-checkbox js-policy-checkbox"
+              />
+              Я <span class="js-username-output">Anonymous</span> погоджуюсь із
+              політикою конфіденційності
+            </label>
+            <button
+              type="submit"
+              class="contact-form-btn js-contact-form-submit"
+            >
+              Відправити
+            </button>
+          </form>
+
+          <!-- Accordion HTML -->
+          <ul class="accordion-list list js-accordion-list">
+            <li class="accordion-list-item">
+              <button class="accordion js-accordion-btn">Item 1</button>
+              <div class="panel js-panel">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Inventore, labore deleniti ullam esse consequatur voluptatem
+                  veritatis, mollitia voluptas voluptatibus quia eveniet veniam,
+                  eaque corrupti id iste! Consequuntur temporibus doloribus
+                  assumenda!
+                </p>
+              </div>
+            </li>
+
+            <li class="accordion-list-item">
+              <button class="accordion js-accordion-btn">Item 2</button>
+              <div class="panel js-panel">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Inventore, labore deleniti ullam esse consequatur voluptatem
+                  veritatis, mollitia voluptas voluptatibus quia eveniet veniam,
+                  eaque corrupti id iste! Consequuntur temporibus doloribus
+                  assumenda!
+                </p>
+              </div>
+            </li>
+
+            <li class="accordion-list-item">
+              <button class="accordion js-accordion-btn">Item 3</button>
+              <div class="panel js-panel">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Inventore, labore deleniti ullam esse consequatur voluptatem
+                  veritatis, mollitia voluptas voluptatibus quia eveniet veniam,
+                  eaque corrupti id iste! Consequuntur temporibus doloribus
+                  assumenda!
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- #endregion -->
+    </main>
+
+    <!--#region  footer -->
+    <!--<footer class="footer-page">
+      <h2 class="title">Результат:</h2>
+      <ul class="items">
+        <li class="item">
+          У вас власний проєкт, в якому буде 5-10 вирішених задач по 1-2
+          модулям, можливо навіть з кількома варіантами вирішення.
+        </li>
+        <li class="item">
+          Проєкт оформлений у вигляді репозиторію на GitHub, що підготує вас до
+          правильної роботи з проєктами та домашніми завданнями.
+        </li>
+        <li class="item">
+          Ви закріпите навички роботи з основами JS та навчитеся працювати з
+          репозиторіями для організації власних проєктів.
+        </li>
+      </ul>
+      <p class="text">
+        Ці завдання допоможуть вам краще зрозуміти такі важливі теми, як основні
+        типи даних в js, основи функцій, розгалуження та цикли, а також набути
+        впевненості у роботі з GitHub.
+      </p>
+    </footer>-->
+    <!--#endregion -->
+
+    <script src="./js/menu.js"></script>
+    <!--<script type="module" src="./js/lesson-1.js"></script>-->
+    <!--<script type="module" src="./js/lesson-2.js"></script>-->
+    <!--<script type="module" src="./js/lesson-3.js"></script>-->
+    <script type="module" src="./js/lesson-4.js"></script>
+  </body>
+</html>
