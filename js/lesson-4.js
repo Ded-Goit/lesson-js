@@ -1,4 +1,24 @@
 "us strict";
+// 1. Додаємо <p class="task-title">Task 1</p> після коментаря <!-- Task - 01 -->
+const titleTask1 = document.createElement("p");
+titleTask1.classList.add("task-title");
+titleTask1.textContent = "Task 1";
+
+// Знаходимо заголовок h1 (йде після <!-- Task - 01 -->)
+const title = document.querySelector("#title");
+
+// Додаємо елемент після h1
+title.insertAdjacentElement("afterend", titleTask1);
+// 2. Додаємо <p class="task-title">Task 2</p> після <ul class="list">
+const titleTask2 = document.createElement("p");
+titleTask2.classList.add("task-title");
+titleTask2.textContent = "Task 2";
+
+// Знаходимо список <ul class="list">
+const list = document.querySelector(".list");
+
+// Додаємо Task 2 після списку
+list.insertAdjacentElement("afterend", titleTask2);
 //Завдання 1:
 // 1 - отримай body елемент і виведи його в консоль;
 console.log(document.body);
@@ -55,10 +75,14 @@ document
 //document.querySelector({ newItem, newLi }).innerHTML = "";
 
 //Завдання 2:
+
 // Створіть контейнер div (з класом numberContainer )в HTML-документі
 const numberContainer = document.createElement("div");
 numberContainer.classList.add("number-container");
-document.body.appendChild(numberContainer);
+// 1 варіант document.body.appendChild(numberContainer);
+
+// Додаємо створений div після  <p class="task-title">Task 2</p>
+titleTask2.insertAdjacentElement("afterend", numberContainer);
 // та динамічно створіть 100 блоків (з класом number) наповнивши їх рандомними
 const randomNumber = () => Math.floor(Math.random() * 100) + 1;
 for (let i = 0; i < 100; i++) {

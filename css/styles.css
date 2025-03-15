@@ -13,9 +13,9 @@ body {
 
 button {
   cursor: pointer;
-  background-color: #ffed3b;
+  /*background-color: #ffed3b;
   box-shadow: inset rgba(255, 255, 255, 0.2) 8px 8px 18px 5px,
-    inset rgba(0, 0, 0, 0.5) -8px -8px 18px 5px;
+    inset rgba(0, 0, 0, 0.5) -8px -8px 18px 5px;*/
 }
 
 section {
@@ -62,8 +62,9 @@ ul {
   align-items: center;
   font-size: 18px;
   font-weight: 700;
-
   margin: 5px;
+  /*box-shadow: inset rgba(255, 255, 255, 0.2) 4px 4px 16px 1px,
+    inset rgba(0, 0, 0, 0.5) -1px -1px 12px 4px;*/
 }
 
 .even {
@@ -113,10 +114,10 @@ span {
   border: 2px dashed red;
   margin: 10px;
 }
-#color {
+/*#color {
   width: 50px;
   height: 50px;
   background-color: #ffed3b;
   box-shadow: inset rgba(255, 255, 255, 0.2) 8px 8px 18px 5px,
     inset rgba(0, 0, 0, 0.5) -8px -8px 18px 5px;
-}
+}*/
