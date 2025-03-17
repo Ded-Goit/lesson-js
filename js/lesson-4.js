@@ -15,31 +15,37 @@ titleTask2.classList.add("task-title");
 titleTask2.textContent = "Task 2";
 
 // Знаходимо список <ul class="list">
-const list = document.querySelector(".list");
+const listUl = document.querySelector(".list");
 
 // Додаємо Task 2 після списку
-list.insertAdjacentElement("afterend", titleTask2);
+listUl.insertAdjacentElement("afterend", titleTask2);
 //Завдання 1:
 // 1 - отримай body елемент і виведи його в консоль;
-console.log(document.body);
+const bodyEl = document.querySelector("body");
+console.log(bodyEl);
 // 2 - отримай елемент id="title" і виведи його в консоль;
-console.log(document.getElementById("title"));
+const titleEl = document.querySelector("#title");
+console.log(titleEl);
 // 3 - отримай елемент class="list" і виведи його в консоль;
-console.log(document.querySelector("list"));
+const listEl = document.querySelector(".list");
+console.log(listEl);
 // 4 - отримай всі елементи з атрибутом data-topic і виведи їх в консоль;
-const dataTopic = document.querySelectorAll("[data-topic]");
+const dataTopic = document.querySelectorAll("li[data-topic]");
 console.log(dataTopic);
 // 5 - отримай перший елемент з списку всіх елементів з атрибутом data-topic і виведи його в консоль;
 console.log(dataTopic[0]);
 // 6 - отримай останній елемент з списку всіх елементів з атрибутом data-topic і виведи його в консоль;
 console.log(dataTopic[dataTopic.length - 1]);
 // 7 - який елемент є сусідом для h1? Знайти і виведи його в консоль;
+const mainTitle = document.querySelector("h1");
+const sibling = mainTitle.nextElementSibling;
+console.log(sibling);
 console.log(document.querySelector("h1").nextElementSibling);
 // 8 - по тегу h3 знайти всі заголовки та виведи їх у консоль;
-const headers = document.querySelectorAll("h3");
-console.log(headers);
+const titles = document.querySelectorAll("h3");
+console.log(titles);
 // 9 - для кожного елeмента h3 додай class="active", який змінить колір заголовка на червоний колір
-headers.forEach((el) => el.classList.add("active"));
+titles.forEach((el) => el.classList.add(".active"));
 // 10 - знайти елемент li який має атрибут data-topic з значенням "navigation" і виведи його в консоль;
 const navigation = document.querySelector("[data-topic='navigation']");
 console.log(navigation);
@@ -54,26 +60,32 @@ console.log(currentElement);
 // 14 - додай до знайденого елемента атрибут style і зроби його backgroundColor блакитним;
 currentElement.style.backgroundColor = "lightblue";
 // 15 - знайти в документі заголовок, який має class="completed" і виведи його в консоль;
-console.log(document.querySelector(".completed"));
+const titleCo = document.querySelector(".completed");
+console.log(titleCo);
 // 16 - видали елемент li в якому знаходиться заголовок, який має class="completed"
 document.querySelector(".completed").parentElement.remove();
 //const completedElement = document.querySelector(".completed")completedElement.closest("li").remove();
 // 17 - після заголовка h1 (перед списком) додай новий елемент p і задай йому наступний текст: "Об'єктна модель документа (Document Object Model)"
-const newParagraph = document.createElement("p");
-newParagraph.textContent = "Об'єктна модель документа (Document Object Model)";
-document
-  .getElementById("title")
-  .insertAdjacentElement("afterend", newParagraph);
+const newText = document.createElement("p");
+newText.textContent = "Об'єктна модель документа (Document Object Model)";
+mainTitle.after(newText);
+
 // 18 - додай новий елемент списку у кінець списка, його заголовок це - "Властивість innerHTML" а опис (р) - "Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу". тобто, потрібно створити елемент LI потім наповнити H3 та P і готову LI закинути у кінець списку
-//const newLi = document.createElement("li");
-//newLi.innerHTML = `<h3>Властивість innerHTML</h3><p>Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу</p>`;
-//document.querySelector(".list").appendChild(newLi);
+const newLi = document.createElement("li");
+newLi.innerHTML = `<h3>Властивість innerHTML</h3><p>Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу</p>`;
+document.querySelector(".list").appendChild(newLi);
 // 19 - зроби це саме, але використовуй шаблонні рядки та метод insertAdjacentHTML()
-//const newItem = `<li><h3>Властивість innerHTML</h3><p>Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу</p></li>`;
+const newItem = `<li><h3>Властивість innerHTML</h3><p>Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу</p></li>`;
+document.querySelector(".list").insertAdjacentHTML("beforeend", newItem);
 //document.querySelector(".list").insertAdjacentHTML("beforeend", newItem);
 // 20 - очисти список
-//document.querySelector({ newItem, newLi }).innerHTML = "";
-
+//document.querySelector(".list").innerHTML = "";
+newLi.remove();
+//Щоб видалити останній <li> у списку:
+const list = document.querySelector(".list");
+if (list.lastElementChild) {
+  list.lastElementChild.remove();
+}
 //Завдання 2:
 
 // Створіть контейнер div (з класом numberContainer )в HTML-документі
@@ -84,6 +96,9 @@ numberContainer.classList.add("number-container");
 // Додаємо створений div після  <p class="task-title">Task 2</p>
 titleTask2.insertAdjacentElement("afterend", numberContainer);
 // та динамічно створіть 100 блоків (з класом number) наповнивши їх рандомними
+// числами від 1 до 100 і додайте їх до контейнера div(numberContainer).
+// Парні числа повинні мати зелений фон (додати клас even),
+// Непарні числа - жовтий фон (додати клас odd).
 const randomNumber = () => Math.floor(Math.random() * 100) + 1;
 for (let i = 0; i < 100; i++) {
   const num = document.createElement("div");
@@ -93,11 +108,6 @@ for (let i = 0; i < 100; i++) {
   num.classList.add(number % 2 === 0 ? "even" : "odd");
   numberContainer.appendChild(num);
 }
-// числами від 1 до 100 і додайте їх до контейнера div(numberContainer).
-// Парні числа повинні мати зелений фон (додати клас even),
-// Непарні числа - жовтий фон (додати клас odd).
-
-//const randomNumber = () => Math.floor(Math.random() * 100) + 1;
 
 //Завдання 3:
 
@@ -126,8 +136,7 @@ input.addEventListener("input", () => {
     input.classList.add("error");
     input.classList.remove("success");
   }
-
-  // Заміна "Anonymous" на введене ім'я
+  //Заміна "Anonymous" на введене ім'я
   usernameOutput.textContent = input.value || "Anonymous";
 });
 
@@ -138,6 +147,7 @@ input.addEventListener("focus", () => {
 
 // 3 - Подія `blur`
 input.addEventListener("blur", () => {
+  //
   input.style.outline = input.value ? "3px solid lime" : "3px solid red";
 });
 
@@ -146,6 +156,7 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   if (input.value.trim() && checkbox.checked) {
+    //
     const userData = {
       userName: input.value.trim(),
     };
@@ -205,21 +216,41 @@ showBtn.addEventListener("click", () => {
   box.style.display = "block";
 });
 
-// Зміна кольору фону за введеним значенням
+//Зміна кольору фону за введеним значенням
 const inputColor = document.createElement("input");
 inputColor.type = "color";
 inputColor.id = "color";
-document.querySelector(".box").appendChild(inputColor);
+document.querySelector(".container").appendChild(inputColor);
 inputColor.addEventListener("input", (event) => {
   box.style.backgroundColor = event.target.value;
 });
 
 // Зміна розміру за введеним значенням
 
-/*const sizeInput = document.querySelector('input[type="number"]');
+// Отримуємо батьківський елемент, куди вставимо поле вводу
+const container = document.body;
 
-  sizeInput.addEventListener("input", (event) => {
-  let newSize = Math.max(20, parseInt(event.target.value));
+// Створюємо <label>
+const label = document.createElement("label");
+label.setAttribute("for", "sizeInput");
+label.textContent = "Введіть розмір (мін. 20px): ";
+
+// Створюємо <input>
+const sizeInput = document.createElement("input");
+sizeInput.setAttribute("type", "number");
+sizeInput.setAttribute("id", "sizeInput");
+sizeInput.setAttribute("min", "20");
+sizeInput.setAttribute("value", "50");
+
+// Додаємо елементи в DOM
+container.appendChild(label);
+container.appendChild(sizeInput);
+
+container.appendChild(box);
+
+// Додаємо обробник подій для зміни розміру box
+sizeInput.addEventListener("input", (event) => {
+  let newSize = Math.max(20, parseInt(event.target.value) || 20);
   box.style.width = `${newSize}px`;
   box.style.height = `${newSize}px`;
-});*/
+});
