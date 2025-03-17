@@ -1,4 +1,3 @@
-`use strict`;
 // Завдання 1:
 
 // Створіть масив styles з елементами 'jazz' і 'blues'
@@ -44,7 +43,7 @@ const logins = ["Peter", "John", "Igor", "Sasha"];
 Перевіряє, чи є введене ім'я в масиві.
 Якщо ім'я є — виводить alert("Welcome, <name>!").
 Якщо імені немає — виводить alert("User not found"). */
-//checkLogin(logins);
+checkLogin(logins);
 
 // Завдання 3:
 // Напишіть функцію caclculateAverage(),
@@ -109,12 +108,12 @@ function findLongestWord(string) {
     }
   }
   return longestWord;
-  /**return string
+  return string
     .split(" ")
     .reduce(
       (longest, word) => (word.length > longest.length ? word : longest),
       ""
-    );*/
+    );
 }
 console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
 
@@ -136,9 +135,9 @@ const user = {
 user.mood = `happy`;
 user.hobby = `skydiving`;
 user.premium = false;
-/**for (const key of Object.keys(user)) {
+for (const key of Object.keys(user)) {
   console.log(`${key}:${user[key]}`);
-}*/
+}
 const properties = Object.entries(user);
 for (const prop of properties) {
   console.log(`${prop[0]}:${prop[1]}`);

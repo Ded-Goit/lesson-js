@@ -1,4 +1,3 @@
-"us strict";
 // 1. Додаємо <p class="task-title">Task 1</p> після коментаря <!-- Task - 01 -->
 const titleTask1 = document.createElement("p");
 titleTask1.classList.add("task-title");
@@ -188,22 +187,27 @@ const changeSize = (delta) => {
 decreaseBtn.addEventListener("click", () => changeSize(-20));
 // При кліку на кнопку "Збільшити" - квадрат стає більшим на 20 пікселів.
 increaseBtn.addEventListener("click", () => changeSize(20));
+
+// Отримуємо батьківський елемент, куди вставимо поле вводу
+const container = document.body;
+
 // Зміна кольору на випадковий
 const colorBtn = document.createElement("button");
 colorBtn.id = "myButton";
 colorBtn.innerHTML = "color";
 colorBtn.style.display = "block";
-document.querySelector(".container").appendChild(colorBtn);
+container.appendChild(colorBtn);
 colorBtn.addEventListener("click", () => {
   box.style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(
     16
   )}`;
 });
+
 // Ховати та показувати квадрат
 const hideBtn = document.createElement("button");
 hideBtn.dataset.action = "hide";
 hideBtn.textContent = "Ховати";
-document.querySelector(".container").appendChild(hideBtn);
+container.appendChild(hideBtn);
 hideBtn.addEventListener("click", () => {
   box.style.display = "none";
 });
@@ -211,7 +215,7 @@ hideBtn.addEventListener("click", () => {
 const showBtn = document.createElement("button");
 showBtn.dataset.action = "show";
 showBtn.textContent = "Показувати";
-document.querySelector(".container").appendChild(showBtn);
+container.appendChild(showBtn);
 showBtn.addEventListener("click", () => {
   box.style.display = "block";
 });
@@ -220,15 +224,12 @@ showBtn.addEventListener("click", () => {
 const inputColor = document.createElement("input");
 inputColor.type = "color";
 inputColor.id = "color";
-document.querySelector(".container").appendChild(inputColor);
+container.appendChild(inputColor);
 inputColor.addEventListener("input", (event) => {
   box.style.backgroundColor = event.target.value;
 });
 
 // Зміна розміру за введеним значенням
-
-// Отримуємо батьківський елемент, куди вставимо поле вводу
-const container = document.body;
 
 // Створюємо <label>
 const label = document.createElement("label");
@@ -246,7 +247,7 @@ sizeInput.setAttribute("value", "50");
 container.appendChild(label);
 container.appendChild(sizeInput);
 
-container.appendChild(box);
+//container.appendChild(box);
 
 // Додаємо обробник подій для зміни розміру box
 sizeInput.addEventListener("input", (event) => {

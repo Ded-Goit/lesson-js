@@ -59,7 +59,7 @@ img {
 }
 /* #region header */
 .page-header {
-  position: fixed;
+  /* position: fixed;*/
   width: 100%;
   background-color: rgba(0, 0, 0, 0.247);
   border-bottom: 1px solid #e7e9fc;
@@ -358,20 +358,7 @@ img {
     max-width: 1118px;
   }
 }
-/*.page-hero {
-}
-.container {
-}
-.hero-container {
-}
-.hero-title {
-}
-.num-list {
-}
-.hero-item {
-}
-.hero-container-task {
-}*/
+
 .list-task {
   color: #0ab40ae1;
   background-color: rgba(0, 0, 0, 0.925);
@@ -387,28 +374,90 @@ img {
 
 /* #endregion */
 
-/* #region  footer */
-/*.footer-page {
+/* #region lesson-4 */
+
+.task-title {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: underline;
+  margin-bottom: 100px;
+}
+
+.module-title {
+  text-align: center;
+}
+
+.number-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.number {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 5px;
+  /*box-shadow: inset rgba(255, 255, 255, 0.2) 4px 4px 16px 1px,
+    inset rgba(0, 0, 0, 0.5) -1px -1px 12px 4px;*/
+}
+
+.even {
+  background-color: #8bc34a;
+}
+
+.odd {
+  background-color: #ffed3b;
+}
+
+/* form styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+.contact-form-input {
+  height: 40px;
+  border: 1px solid #cccccc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-form-btn {
+  margin-top: 20px;
+}
+
+.success {
+  outline: 3px solid greenyellow;
+}
+
+.error {
+  outline: 3px solid red;
+}
+
+.js-username-output {
+  text-decoration: underline;
+}
+
+/* Box */
+.box {
+  width: 50px;
+  height: 50px;
+  border: 2px dashed red;
+  margin: 10px;
+}
+/*#color {
+  width: 50px;
+  height: 50px;
+  background-color: #ffed3b;
+  box-shadow: inset rgba(255, 255, 255, 0.2) 8px 8px 18px 5px,
+    inset rgba(0, 0, 0, 0.5) -8px -8px 18px 5px;
 }*/
-.title,
-.items,
-.text {
-  padding-left: 80px;
-}
-
-.footer-page {
-  background-color: rgba(0, 0, 0, 0.247);
-  padding: 96px 0;
-}
-
-@media screen and (min-width: 768px) {
-  .logo.footer-logo {
-    text-align: left;
-  }
-}
-@media screen and (min-width: 1158px) {
-  .footer-page {
-    padding: 100px 0;
-  }
-}
 /* #endregion */
