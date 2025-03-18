@@ -190,13 +190,13 @@ increaseBtn.addEventListener("click", () => changeSize(20));
 
 // Отримуємо батьківський елемент, куди вставимо поле вводу
 const container = document.body;
-
+const tt = document.querySelector("#tt");
 // Зміна кольору на випадковий
 const colorBtn = document.createElement("button");
 colorBtn.id = "myButton";
 colorBtn.innerHTML = "color";
-colorBtn.style.display = "block";
-container.appendChild(colorBtn);
+colorBtn.classList.add("butt");
+tt.appendChild(colorBtn);
 colorBtn.addEventListener("click", () => {
   box.style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(
     16
@@ -207,7 +207,8 @@ colorBtn.addEventListener("click", () => {
 const hideBtn = document.createElement("button");
 hideBtn.dataset.action = "hide";
 hideBtn.textContent = "Ховати";
-container.appendChild(hideBtn);
+hideBtn.classList.add("butt");
+tt.appendChild(hideBtn);
 hideBtn.addEventListener("click", () => {
   box.style.display = "none";
 });
@@ -215,7 +216,8 @@ hideBtn.addEventListener("click", () => {
 const showBtn = document.createElement("button");
 showBtn.dataset.action = "show";
 showBtn.textContent = "Показувати";
-container.appendChild(showBtn);
+showBtn.classList.add("butt");
+tt.appendChild(showBtn);
 showBtn.addEventListener("click", () => {
   box.style.display = "block";
 });
@@ -224,7 +226,8 @@ showBtn.addEventListener("click", () => {
 const inputColor = document.createElement("input");
 inputColor.type = "color";
 inputColor.id = "color";
-container.appendChild(inputColor);
+inputColor.classList.add("butt");
+tt.appendChild(inputColor);
 inputColor.addEventListener("input", (event) => {
   box.style.backgroundColor = event.target.value;
 });
@@ -244,8 +247,8 @@ sizeInput.setAttribute("min", "20");
 sizeInput.setAttribute("value", "50");
 
 // Додаємо елементи в DOM
-container.appendChild(label);
-container.appendChild(sizeInput);
+tt.appendChild(label);
+tt.appendChild(sizeInput);
 
 //container.appendChild(box);
 

@@ -59,7 +59,7 @@ img {
 }
 /* #region header */
 .page-header {
-  /* position: fixed;*/
+  position: fixed;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.247);
   border-bottom: 1px solid #e7e9fc;
@@ -142,7 +142,7 @@ img {
   }
   .nav-link:hover::after,
   .nav-link:focus::after,
-  .nav-link.current::after {
+  .nav-link.current {
     opacity: 1;
   }
   .contacts-list {
@@ -381,7 +381,8 @@ img {
   font-style: italic;
   font-weight: 500;
   text-decoration: underline;
-  margin-bottom: 100px;
+  margin-bottom: 16px;
+  margin-top: 24px;
 }
 
 .module-title {
@@ -432,6 +433,9 @@ img {
 
 .contact-form-btn {
   margin-top: 20px;
+  background-color: #ffed3b;
+  box-shadow: inset rgba(255, 255, 255, 0.2) 8px 8px 18px 5px,
+    inset rgba(0, 0, 0, 0.5) -8px -8px 18px 5px;
 }
 
 .success {
@@ -453,11 +457,18 @@ img {
   border: 2px dashed red;
   margin: 10px;
 }
-/*#color {
+#color {
   width: 50px;
   height: 50px;
   background-color: #ffed3b;
   box-shadow: inset rgba(255, 255, 255, 0.2) 8px 8px 18px 5px,
     inset rgba(0, 0, 0, 0.5) -8px -8px 18px 5px;
-}*/
+}
+.butt {
+  margin: 0 20px;
+  background-color: #ffed3b;
+  box-shadow: inset rgba(255, 255, 255, 0.2) 8px 8px 18px 5px,
+    inset rgba(0, 0, 0, 0.5) -8px -8px 18px 5px;
+}
+
 /* #endregion */
